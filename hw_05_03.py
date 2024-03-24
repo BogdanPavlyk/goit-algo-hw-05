@@ -132,7 +132,8 @@ def time_search_algorithm(algorithm, text, pattern):
 text1 = read_file('article_1.txt')
 text2 = text1 = read_file('article_2.txt')
 
-pattern1 = "Жадібний алгоритм у цьому випадку полягає в тому, щоб на кожному кроці побудови рішення використовувати монети максимального номіналу,"
+pattern1 = "Правильно підібраний алгоритм пошуку, що враховує ці обмеження відіграє визначальну роль у продуктивності системи."
+pattern3 = "Крок 2. Для кожного агента випадковим чином генерується від 1 до n вподобань."
 pattern2 = "неіснуючий"  # Не існує в тексті
 
 # Список алгоритмів
@@ -143,6 +144,6 @@ for algorithm in algorithms:
     name = algorithm.__name__
     print(f"{name} пошук '{pattern1}' у text1: {time_search_algorithm(algorithm, text1, pattern1)} секунд")
     print(f"{name} пошук '{pattern2}' у text1: {time_search_algorithm(algorithm, text1, pattern2)} секунд")
-    print(f"{name} пошук '{pattern1}' у text2: {time_search_algorithm(algorithm, text2, pattern1)} секунд")
+    print(f"{name} пошук '{pattern3}' у text2: {time_search_algorithm(algorithm, text2, pattern3)} секунд")
     print(f"{name} пошук '{pattern2}' у text2: {time_search_algorithm(algorithm, text2, pattern2)} секунд")
     
